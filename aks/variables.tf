@@ -21,7 +21,7 @@ variable "vm_size" {
 }
 
 variable vm_os_disk_size {
-  default = 60
+  default = 30
 }
 
 variable "vm_count" {
