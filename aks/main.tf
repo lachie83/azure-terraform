@@ -20,10 +20,11 @@ resource "azurerm_kubernetes_cluster" "cluster" {
   }
 
   agent_pool_profile {
-    name    = "${var.vm_pool_name}"
-    count   = "${var.vm_count}"
-    vm_size = "${var.vm_size}"
-    os_type = "Linux"
+    name            = "${var.vm_pool_name}"
+    count           = "${var.vm_count}"
+    vm_size         = "${var.vm_size}"
+    os_type         = "Linux"
+    os_disk_size_gb = "${var.vm_os_disk_size}"
   }
 
   service_principal {
